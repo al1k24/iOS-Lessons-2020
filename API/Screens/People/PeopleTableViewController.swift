@@ -9,33 +9,35 @@ import UIKit
 
 class PeopleTableViewController: UITableViewController {
     
-    let items = ["Item 1", "Item2", "Item3", "Item4"]
+    private var people = [PeopleResult]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.backgroundColor = .yellow
+        PeopleManager.shared.fetchPeople(byPage: 1) { [unowned self] (model: [PeopleResult]?) in
+            guard let people = model else {
+                return
+            }
+            
+            self.people = people
+            self.tableView.reloadData()
+        }
+        
         tableView.register(PeopleTableViewCell.nib, forCellReuseIdentifier: PeopleTableViewCell.cellId)
     }
 
     // MARK: - Table view data source
-
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 1
-//    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return people.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: PeopleTableViewCell.cellId, for: indexPath) as? PeopleTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: PeopleTableViewCell.cellId, for: indexPath) as? PeopleTableViewCell, let name = people[indexPath.row].name else {
             return UITableViewCell()
         }
-
-        cell.nameLabel.text = items[indexPath.row]
+        
+        cell.nameLabel.text = name
         
         return cell
     }
