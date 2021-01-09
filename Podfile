@@ -6,6 +6,8 @@ target 'API' do
   use_frameworks!
 
   # Pods for API
+  pod 'Realm'
+  pod 'RealmSwift'
   pod 'Alamofire'
   pod 'SwiftyJSON'
 
