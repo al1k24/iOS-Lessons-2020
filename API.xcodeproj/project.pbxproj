@@ -16,6 +16,9 @@
 		44070B152594CCF0009415F4 /* PeopleResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44070B142594CCF0009415F4 /* PeopleResult.swift */; };
 		44070B1A2594CFC9009415F4 /* PeopleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44070B192594CFC9009415F4 /* PeopleManager.swift */; };
 		44070B242594E5AB009415F4 /* Codable+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44070B232594E5AB009415F4 /* Codable+JSON.swift */; };
+		4413E29625A9DB2A0094185C /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4413E29525A9DB2A0094185C /* DatabaseManager.swift */; };
+		4413E29925A9E13E0094185C /* RealmDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4413E29825A9E13E0094185C /* RealmDatabase.swift */; };
+		4413E29C25A9E3680094185C /* PeopleRealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4413E29B25A9E3680094185C /* PeopleRealmModel.swift */; };
 		446555FB2594C37C009FCD2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446555FA2594C37C009FCD2B /* AppDelegate.swift */; };
 		446555FD2594C37C009FCD2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446555FC2594C37C009FCD2B /* SceneDelegate.swift */; };
 		446556042594C37F009FCD2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 446556032594C37F009FCD2B /* Assets.xcassets */; };
@@ -31,6 +34,9 @@
 		44070B142594CCF0009415F4 /* PeopleResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleResult.swift; sourceTree = "<group>"; };
 		44070B192594CFC9009415F4 /* PeopleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleManager.swift; sourceTree = "<group>"; };
 		44070B232594E5AB009415F4 /* Codable+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Codable+JSON.swift"; sourceTree = "<group>"; };
+		4413E29525A9DB2A0094185C /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		4413E29825A9E13E0094185C /* RealmDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDatabase.swift; sourceTree = "<group>"; };
+		4413E29B25A9E3680094185C /* PeopleRealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleRealmModel.swift; sourceTree = "<group>"; };
 		446555F72594C37C009FCD2B /* API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = API.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		446555FA2594C37C009FCD2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		446555FC2594C37C009FCD2B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				44070B072594C8AD009415F4 /* RequestHandler.swift */,
+				4413E29825A9E13E0094185C /* RealmDatabase.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -93,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				44070B142594CCF0009415F4 /* PeopleResult.swift */,
+				4413E29B25A9E3680094185C /* PeopleRealmModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -101,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				44070B192594CFC9009415F4 /* PeopleManager.swift */,
+				4413E29525A9DB2A0094185C /* DatabaseManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -280,14 +289,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4413E29925A9E13E0094185C /* RealmDatabase.swift in Sources */,
 				446555FB2594C37C009FCD2B /* AppDelegate.swift in Sources */,
 				44070B152594CCF0009415F4 /* PeopleResult.swift in Sources */,
 				44070B082594C8AD009415F4 /* RequestHandler.swift in Sources */,
 				44070B102594CBC5009415F4 /* PeopleTableViewCell.swift in Sources */,
 				44070B242594E5AB009415F4 /* Codable+JSON.swift in Sources */,
 				446555FD2594C37C009FCD2B /* SceneDelegate.swift in Sources */,
+				4413E29C25A9E3680094185C /* PeopleRealmModel.swift in Sources */,
 				44070AFE2594C7BB009415F4 /* PeopleTableViewController.swift in Sources */,
 				44070B1A2594CFC9009415F4 /* PeopleManager.swift in Sources */,
+				4413E29625A9DB2A0094185C /* DatabaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
