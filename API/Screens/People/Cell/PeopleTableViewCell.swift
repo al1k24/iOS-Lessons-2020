@@ -9,7 +9,7 @@ import UIKit
 
 class PeopleTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
 
     // Set the identifier for the custom cell
     static let cellId = "peopleCellId"
@@ -28,6 +28,10 @@ class PeopleTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func configure(with model: PeopleResult) {
+        nameLabel.text = model.name
     }
     
 }
